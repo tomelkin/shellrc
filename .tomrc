@@ -1,0 +1,39 @@
+# .rc settings that should work for both Bash and Zsh
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+rvm use default
+export PATH=$PATH:$HOME/.rvm/bin
+
+export PATH=/usr/local/bin:$PATH
+export PATH=/usr/local/sbin:$PATH
+
+export EDITOR=vim
+
+alias gs='git status'
+alias gca='git commit --amend'
+alias ga='git add .'
+alias gc='git commit'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gpr='git pull --rebase'
+alias grc='git rebase --continue'
+alias h='history'
+alias ll='ls -l'
+alias lt='ls -rlt'
+alias pd='pushd'
+alias ss='script/server'
+alias be='bundle exec'
+alias bu='bundle update'
+alias ss='script/server'
+alias sc='script/console'
+alias so='source'
+
+# For REA, cp-agentadmin build:
+
+export RUBY_HEAP_MIN_SLOTS=500000
+export RUBY_HEAP_SLOTS_INCREMENT=250000
+export RUBY_HEAP_SLOTS_GROWTH_FACTOR=1
+export RUBY_GC_MALLOC_LIMIT=50000000
+# See: http://blog.evanweaver.com/2009/04/09/ruby-gc-tuning/
+export CP_DOMAIN_ENV=development
+
