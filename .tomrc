@@ -37,3 +37,4 @@ export RUBY_GC_MALLOC_LIMIT=50000000
 # See: http://blog.evanweaver.com/2009/04/09/ruby-gc-tuning/
 export CP_DOMAIN_ENV=development
 
+export ARCHFLAGS="-arch x86_64" # for REA, 64-bit native gems
